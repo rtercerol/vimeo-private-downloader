@@ -20,6 +20,7 @@ function loadVideo(num, cb) {
     let audioData = {}
     if (json.audio !== null) {
       audioData = json.audio
+        .filter((data) => data.segments[0].url !== "")
         .sort((a1, a2) => a1.avg_bitrate - a2.avg_bitrate)
         .pop();
     }
