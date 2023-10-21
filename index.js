@@ -120,7 +120,7 @@ function combineSegments(type, i, segmentsUrl, output, filename, downloadingFlag
   log(
     "📦",
     type === "video" ? "📹" : "🎧",
-    `Downloading ${type} segment ${i}/${segmentsUrl.length} of ${filename}`
+    `Downloading ${type} segment ${i+1}/${segmentsUrl.length} of ${filename}`
   );
 
   let req = https
